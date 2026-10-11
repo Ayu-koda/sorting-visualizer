@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorting Visualizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <header class="head"><h1>Sorting Visualizer</h1></header>
+
+  <div class="container">
+    <aside class="input-container">
+      <div class="input" id="size">
+        <label for="a_size">Size of Array</label>
+        <input id="a_size" type="range" min="20" max="150" step="1" value="70" />
+      </div>
+      <div class="input" id="speed">
+        <label for="a_speed">Speed of Algorithm</label>
+        <input id="a_speed" type="range" min="1" max="5" step="1" value="3" />
+      </div>
+
+      <div class="result-container">
+        <h2>Time Complexities</h2>
+        <div class="case">Best Case <p id="Time_Best">–</p></div>
+        <div class="case">Average Case <p id="Time_Average">–</p></div>
+        <div class="case">Worst Case <p id="Time_Worst">–</p></div>
+        <div class="case">Space <p id="Space_Worst">–</p></div>
+        <h2>This Run</h2>
+        <div class="case">Comparisons <p id="Comparisons">0</p></div>
+        <div class="case">Swaps / Writes <p id="Swaps">0</p></div>
+        <div class="case">Time <p id="Time-diff">0 ms</p></div>
+      </div>
+    </aside>
+
+    <main class="main-container">
+      <div class="sorting-algo" id="algo">
+        <button title="Sort using Bubble Sort">Bubble</button>
+        <button title="Sort using Selection Sort">Selection</button>
+        <button title="Sort using Insertion Sort">Insertion</button>
+        <button title="Sort using Merge Sort">Merge</button>
+        <button title="Sort using Quick Sort">Quick</button>
+        <button title="Sort using Heap Sort">Heap</button>
+      </div>
+      <div class="array" id="generate">
+        <button id="generating">Generate New Array</button>
+        <button id="last-array">Last Array</button>
+      </div>
+      <div class="visual-container" id="array_container"></div>
+    </main>
+  </div>
+
+  <script src="./js/sorts.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
